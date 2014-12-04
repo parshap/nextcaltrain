@@ -1,0 +1,5 @@
+route_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color
+Bu-121,,"Bullet",,2,,E31837
+Li-121,,"Limited",,2,,FEF0B5
+Lo-121,,"Local",,2,,
+TaSj-121,,"Tamien / San Jose Diridon Caltrain Shuttle",,3,,
