@@ -1,3 +1,11 @@
+# caltrain-schedule
+
+## Command Line Usage
+
+```
+$ nextcaltrain ctsf ctsmat
+```
+
 # Notes
 
 1. Search `store.calendar` for *services* matching the current date.
