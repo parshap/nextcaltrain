@@ -27,7 +27,7 @@ var getSchedule = require("./lib/schedule");
 var getTripStops = require("./lib/trip-stops");
 
 module.exports = function(callback) {
-  loadStore("./data", function(err, store) {
+  loadStore(__dirname + "/data", function(err, store) {
     if (err) {
       return callback(err);
     }
