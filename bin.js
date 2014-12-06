@@ -2,7 +2,7 @@
 "use strict";
 
 var args = require('minimist')(process.argv.slice(2));
-var caltrain = require("./");
+var caltrain = require("./async");
 var format = require("./lib/output");
 
 var from = args._[0];
