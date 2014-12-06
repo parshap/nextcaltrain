@@ -19,7 +19,9 @@ module.exports = function(callback) {
     if (err) {
       return callback(err);
     }
-    callback(null, getScheduleWrapper.bind(null, store));
+    var ret = getScheduleWrapper.bind(null, store);
+    ret.store = store;
+    callback(null, ret);
   });
 };
 

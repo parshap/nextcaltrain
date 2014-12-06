@@ -23,3 +23,4 @@ function getScheduleWrapper(store, opts) {
 var store = new Store();
 extend(store, require("./data.json"));
 module.exports = getScheduleWrapper.bind(null, store);
+module.exports.store = store;
