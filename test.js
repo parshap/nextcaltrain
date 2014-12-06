@@ -2,7 +2,7 @@
 "use strict";
 
 var test = require("tape");
-var loadCaltrainSchedule = require("./");
+var loadCaltrainSchedule = require("./async");
 var isSameStopLocation = require("./lib/util").isSameStopLocation;
 
 test("caltrain", function(t) {

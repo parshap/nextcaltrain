@@ -1,16 +1,27 @@
+// jshint camelcase:false
 "use strict";
 
+var load = require("./lib/load");
 var Store = require("./lib/store");
 
-// ## Load Schedule
+// ## Load Schedule Async
 //
 // A wrapper around lib/schedule.js which includes loading schedule data,
 // calculating the next scheduled stop, and attaching additional related data.
 //
 
-var extend = require("extend-object");
 var getSchedule = require("./lib/schedule");
 var getRelated = require("./lib/related");
+
+module.exports = function(callback) {
+  var store = new Store();
+  load(store, __dirname + "/data", function(err) {
+    if (err) {
+      return callback(err);
+    }
+    callback(null, getScheduleWrapper.bind(null, store));
+  });
+};
 
 function getScheduleWrapper(store, opts) {
   var getNextStop = getSchedule(store, opts);
@@ -19,7 +30,3 @@ function getScheduleWrapper(store, opts) {
     return getRelated(store, stop, opts);
   };
 }
-
-var store = new Store();
-extend(store, require("./data.json"));
-module.exports = getScheduleWrapper.bind(null, store);
