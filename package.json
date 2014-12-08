@@ -1,7 +1,7 @@
 {
-  "name": "caltrain-schedule",
-  "version": "1.0.0",
-  "description": "",
+  "name": "nextcaltrain",
+  "version": "0.0.0",
+  "description": "Find the next Caltrain",
   "main": "index.js",
   "scripts": {
     "test": "tape test.js",
@@ -12,9 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:parshap/caltrain-schedule.git"
+    "url": "git@github.com:parshap/nextcaltrain.git"
   },
   "keywords": [
+    "next caltrain",
     "caltrain",
     "schedule",
     "gtfs"
@@ -22,9 +23,9 @@
   "author": "Parsha Pourkhomami",
   "license": "Public Domain",
   "bugs": {
-    "url": "https://github.com/parshap/caltrain-schedule/issues"
+    "url": "https://github.com/parshap/nextcaltrain/issues"
   },
-  "homepage": "https://github.com/parshap/caltrain-schedule",
+  "homepage": "https://github.com/parshap/nextcaltrain",
   "dependencies": {
     "array-find": "^0.1.1",
     "async": "^0.9.0",

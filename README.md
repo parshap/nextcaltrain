@@ -1,8 +1,8 @@
-# caltrain-schedule
+# nextcaltrain
 
-Find the next Caltrain.
+Find the next Caltrain
 
-## `nextcaltrain` CLI Usage
+## CLI Usage
 
 ```
 SYNOPSIS
