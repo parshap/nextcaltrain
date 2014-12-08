@@ -10,8 +10,7 @@ var Store = require("./lib/store");
 // calculating the next scheduled stop, and attaching additional related data.
 //
 
-var getSchedule = require("./lib/schedule");
-var getRelated = require("./lib/related");
+var getScheduleWrapper = require("./lib/schedule-wrapper");
 
 module.exports = function(callback) {
   var store = new Store();
@@ -24,11 +23,3 @@ module.exports = function(callback) {
     callback(null, ret);
   });
 };
-
-function getScheduleWrapper(store, opts) {
-  var getNextStop = getSchedule(store, opts);
-  return function() {
-    var stop = getNextStop();
-    return getRelated(store, stop, opts);
-  };
-}

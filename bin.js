@@ -23,11 +23,20 @@ caltrain(function(err, getSchedule) {
     throw err;
   }
 
-  var getNextStop = getSchedule({
-    from: from,
-    to: to,
-    date: new Date(),
-  });
+  var getNextStop;
+  try {
+    getNextStop = getSchedule({
+      from: from,
+      to: to,
+      date: new Date(),
+    });
+  }
+  catch (err) {
+    if (err.code === "STOP_NOT_FOUND") {
+      console.error(err.message);
+      return;
+    }
+  }
 
   console.log(format(getNextStop()));
 });
