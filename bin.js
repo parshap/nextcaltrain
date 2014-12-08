@@ -1,9 +1,17 @@
 #!/usr/bin/env node
 "use strict";
 
-var args = require('minimist')(process.argv.slice(2));
 var caltrain = require("./async");
 var format = require("./lib/output");
+
+var args = require('minimist')(process.argv.slice(2), {
+  default: {
+    "number": 1,
+  },
+  alias: {
+    "number": "n",
+  },
+});
 
 var from = args._[0];
 var to = args._[1];
@@ -23,9 +31,9 @@ caltrain(function(err, getSchedule) {
     throw err;
   }
 
-  var getNextStop;
+  var getTrip;
   try {
-    getNextStop = getSchedule({
+    getTrip = getSchedule({
       from: from,
       to: to,
       date: new Date(),
@@ -38,5 +46,12 @@ caltrain(function(err, getSchedule) {
     }
   }
 
-  console.log(format(getNextStop()));
+  console.log(format.heading(getTrip.from, getTrip.to));
+
+  for (var i = 0; i < args.number; i++) {
+    if (i !== 0) {
+      console.log();
+    }
+    console.log(format.trip(getTrip()));
+  }
 });
