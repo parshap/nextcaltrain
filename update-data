@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Usage:
+#
+# update-data http://www.caltrain.com/Assets/GTFS/caltrain/GTFS-Caltrain-Devs.zip
+#
+
+zipurl=$1
+zipbase=`basename $zipurl`
+zippath=`mktemp -t "$zipbase"`
+curl "$zipurl" -o $zippath
+unzip -d ./data/ $zippath
+rm $zippath
+
+./dump > data.json

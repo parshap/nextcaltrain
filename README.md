@@ -45,7 +45,8 @@ SB 146 Local, 33 min, 7 stops
 
 Schedule data [is provided by Caltrain\*][schedule data] in the [GTFS][]
 format. This data is stored in its original format in the `data/`
-directory and also as JSON in `data.json`.
+directory and also as JSON in `data.json`. This data can be updated
+using the `update-data` script.
 
 \*You must fill out [this agreement][agreement] to download schedule
 data from Caltrain.
