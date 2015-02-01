@@ -41,6 +41,19 @@ SB 146 Local, 33 min, 7 stops
  > 12:40pm San Mateo
 ```
 
+## Data
+
+Schedule data [is provided by Caltrain\*][schedule data] in the [GTFS][]
+format. This data is stored in its original format in the `data/`
+directory and also as JSON in `data.json`.
+
+\*You must fill out [this agreement][agreement] to download schedule
+data from Caltrain.
+
+[schedule data]: http://www.caltrain.com/developer/Developer_License_Agreement_and_Privacy_Policy.html?IsSubmitted=True
+[gtfs]: https://developers.google.com/transit/gtfs/
+[agreement]: http://www.caltrain.com/developer/Developer_License_Agreement_and_Privacy_Policy.html
+
 ## Installation
 
 ```
