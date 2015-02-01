@@ -2,6 +2,7 @@
 "use strict";
 
 var test = require("tape");
+var CURRENT_YEAR = new Date().getFullYear();
 var loadCaltrainSchedule = require("./async");
 var isSameStopLocation = require("./lib/util").isSameStopLocation;
 
@@ -11,13 +12,13 @@ test("caltrain", function(t) {
     var getNextStop = getSchedule({
       from: "ctsf",
       to: "ctsmat",
-      date: new Date(2014, 11, 1, 12),
+      date: new Date(CURRENT_YEAR, 11, 1, 12),
     });
     var stop = getNextStop();
 
-    t.equal(stop.serviceDate.getFullYear(), 2014);
+    t.equal(stop.serviceDate.getFullYear(), CURRENT_YEAR);
     t.equal(stop.serviceDate.getMonth(), 11);
-    t.equal(stop.serviceDate.getDay(), 1);
+    t.equal(stop.serviceDate.getDate(), 1);
 
     t.equal(stop.trip.route_id, stop.route.route_id);
     t.equal(stop.trip.service_id, stop.service.service_id);
@@ -29,9 +30,9 @@ test("caltrain", function(t) {
 
     t.equal(firstTripStop.stopTime.stop_id, "70012");
 
-    t.equal(firstTripStop.date.getFullYear(), 2014);
+    t.equal(firstTripStop.date.getFullYear(), CURRENT_YEAR);
     t.equal(firstTripStop.date.getMonth(), 11);
-    t.equal(firstTripStop.date.getDay(), 1);
+    t.equal(firstTripStop.date.getDate(), 1);
     t.equal(firstTripStop.date.getHours(), 12);
     t.equal(firstTripStop.date.getMinutes(), 7);
 
