@@ -40,3 +40,9 @@ SB 146 Local, 33 min, 7 stops
  > 12:35pm Burlingame
  > 12:40pm San Mateo
 ```
+
+## Installation
+
+```
+npm install nextcaltrain
+```
