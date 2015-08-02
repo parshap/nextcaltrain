@@ -13,3 +13,4 @@ unzip -d ./data/ $zippath
 rm $zippath
 
 ./dump > data.json
+./dump-stations > stations.json
