@@ -2,6 +2,7 @@
   {
     "id": "ctsf",
     "name": "San Francisco",
+    "stop_ids": ["70011", "70012"],
     "aliases": [
       "san fran",
       "s francisco",
@@ -11,6 +12,7 @@
   {
     "id": "ct22",
     "name": "22nd Street",
+    "stop_ids": ["70021", "70022"],
     "aliases": [
       "22 Street",
       "22"
@@ -19,6 +21,7 @@
   {
     "id": "ctba",
     "name": "Bayshore",
+    "stop_ids": ["70031", "70032"],
     "aliases": [
       "ba"
     ]
@@ -26,6 +29,7 @@
   {
     "id": "ctssf",
     "name": "South SF",
+    "stop_ids": ["70041", "70042"],
     "aliases": [
       "South San Francisco",
       "So San Francisco",
@@ -39,6 +43,7 @@
   {
     "id": "ctsb",
     "name": "San Bruno",
+    "stop_ids": ["70051", "70052"],
     "aliases": [
       "s bruno",
       "sb"
@@ -47,6 +52,7 @@
   {
     "id": "ctmi",
     "name": "Millbrae",
+    "stop_ids": ["70061", "70062"],
     "aliases": [
       "mi"
     ]
@@ -54,6 +60,7 @@
   {
     "id": "ctbr",
     "name": "Broadway",
+    "stop_ids": ["70071", "70072"],
     "aliases": [
       "br"
     ]
@@ -61,6 +68,7 @@
   {
     "id": "ctbu",
     "name": "Burlingame",
+    "stop_ids": ["70081", "70082", "770081"],
     "aliases": [
       "bu"
     ]
@@ -68,6 +76,7 @@
   {
     "id": "ctsmat",
     "name": "San Mateo",
+    "stop_ids": ["70091", "70092", "770091"],
     "aliases": [
       "s mateo",
       "san mat",
@@ -77,6 +86,7 @@
   {
     "id": "ctha",
     "name": "Hayward Park",
+    "stop_ids": ["70101", "70102", "770101"],
     "aliases": [
       "hay park",
       "h park",
@@ -87,6 +97,7 @@
   {
     "id": "cthi",
     "name": "Hillsdale",
+    "stop_ids": ["70111", "70112"],
     "aliases": [
       "hi"
     ]
@@ -94,6 +105,7 @@
   {
     "id": "ctbe",
     "name": "Belmont",
+    "stop_ids": ["70121", "70122"],
     "aliases": [
       "be"
     ]
@@ -101,6 +113,7 @@
   {
     "id": "ctsc",
     "name": "San Carlos",
+    "stop_ids": ["70131", "70132"],
     "aliases": [
       "s carlos",
       "sc"
@@ -109,6 +122,7 @@
   {
     "id": "ctrwc",
     "name": "Redwood City",
+    "stop_ids": ["70141", "70142"],
     "aliases": [
       "red city",
       "r city",
@@ -120,6 +134,7 @@
   {
     "id": "ctat",
     "name": "Atherton",
+    "stop_ids": ["70151", "70152"],
     "aliases": [
       "at"
     ]
@@ -127,6 +142,7 @@
   {
     "id": "ctmp",
     "name": "Menlo Park",
+    "stop_ids": ["70161", "70162"],
     "aliases": [
       "m park",
       "men park",
@@ -136,6 +152,7 @@
   {
     "id": "ctpa",
     "name": "Palo Alto",
+    "stop_ids": ["70171", "70172"],
     "aliases": [
       "p alto",
       "pal alto",
@@ -145,6 +162,7 @@
   {
     "id": "ctca",
     "name": "California Ave",
+    "stop_ids": ["70191", "70192"],
     "aliases": [
       "California Ave",
       "cal avenue",
@@ -157,6 +175,7 @@
   {
     "id": "ctsa",
     "name": "San Antonio",
+    "stop_ids": ["70201", "70202"],
     "aliases": [
       "s antonio",
       "sa"
@@ -165,6 +184,7 @@
   {
     "id": "ctmv",
     "name": "Mountain View",
+    "stop_ids": ["70211", "70212"],
     "aliases": [
       "mt view",
       "m view",
@@ -174,6 +194,7 @@
   {
     "id": "ctsu",
     "name": "Sunnyvale",
+    "stop_ids": ["70221", "70222"],
     "aliases": [
       "sunny",
       "svale",
@@ -185,6 +206,7 @@
   {
     "id": "ctla",
     "name": "Lawrence",
+    "stop_ids": ["70231", "70232"],
     "aliases": [
       "law",
       "la"
@@ -193,6 +215,7 @@
   {
     "id": "ctscl",
     "name": "Santa Clara",
+    "stop_ids": ["70241", "70242"],
     "aliases": [
       "s clara",
       "scl"
@@ -201,6 +224,7 @@
   {
     "id": "ctco",
     "name": "College Park",
+    "stop_ids": ["70251", "70252"],
     "aliases": [
       "col park",
       "coll park",
@@ -212,6 +236,7 @@
   {
     "id": "ctsj",
     "name": "San Jose",
+    "stop_ids": ["70261", "70262"],
     "aliases": [
       "s jose",
       "jose",
@@ -221,6 +246,7 @@
   {
     "id": "ctta",
     "name": "Tamien",
+    "stop_ids": ["70271", "70272"],
     "aliases": [
       "tam",
       "ta"
@@ -229,6 +255,7 @@
   {
     "id": "ctcap",
     "name": "Capitol",
+    "stop_ids": ["70281", "70282"],
     "aliases": [
       "capital",
       "cap"
@@ -237,6 +264,7 @@
   {
     "id": "ctbl",
     "name": "Blossom Hill",
+    "stop_ids": ["70291", "70292"],
     "aliases": [
       "blossom",
       "blos hill",
@@ -249,6 +277,7 @@
   {
     "id": "ctmh",
     "name": "Morgan Hill",
+    "stop_ids": ["70301", "70302"],
     "aliases": [
       "morgan",
       "mor hill",
@@ -260,6 +289,7 @@
   {
     "id": "ctsmar",
     "name": "San Martin",
+    "stop_ids": ["70311", "70312"],
     "aliases": [
       "s martin",
       "smar"
@@ -268,6 +298,7 @@
   {
     "id": "ctgi",
     "name": "Gilroy",
+    "stop_ids": ["70321", "70322"],
     "aliases": [
       "gil",
       "gi"

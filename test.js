@@ -4,7 +4,7 @@
 var test = require("tape");
 var CURRENT_YEAR = new Date().getFullYear();
 var loadCaltrainSchedule = require("./async");
-var isSameStopLocation = require("./lib/util").isSameStopLocation;
+var isStopAtStation = require("./lib/util").isStopAtStation;
 
 test("caltrain", function(t) {
   loadCaltrainSchedule(function(err, getSchedule) {
@@ -36,8 +36,8 @@ test("caltrain", function(t) {
     t.equal(firstTripStop.date.getHours(), 12);
     t.equal(firstTripStop.date.getMinutes(), 7);
 
-    t.assert(isSameStopLocation(firstTripStop.stop, stop.fromStop));
-    t.assert(isSameStopLocation(lastTripStop.stop, stop.toStop));
+    t.assert(isStopAtStation(firstTripStop.stop, stop.fromStation));
+    t.assert(isStopAtStation(lastTripStop.stop, stop.toStation));
 
     // Assert trip of stop times
     stop.tripStops.forEach(function(tripStop) {
@@ -46,7 +46,7 @@ test("caltrain", function(t) {
 
     // Assert and station are same
     stop.tripStops.forEach(function(tripStop) {
-      t.assert(isSameStopLocation(tripStop.stop, tripStop.station));
+      t.assert(isStopAtStation(tripStop.stop, tripStop.station));
     });
 
     // Assert order of dates
