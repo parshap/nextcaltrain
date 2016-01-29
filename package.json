@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "tape test.js",
-    "dump-data": "./dump > data.json && ./dump-stations > stations.json"
+    "dump-data": "./dump > data.json"
   },
   "bin": {
     "nextcaltrain": "bin.js"
