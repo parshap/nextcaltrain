@@ -1,8 +1,7 @@
 "use strict";
 
 var find = require("array-find");
-var stations = require("../stations.json");
-var util = require("./util");
+var stations = require("./stations.json");
 
 var stationTerms = stations.map(function(station) {
   return {
@@ -23,6 +22,14 @@ function isMatch(terms, query) {
   });
 }
 
+module.exports = stations;
+
+module.exports.byId = function(id) {
+  return find(stations, function(station) {
+    return station.id === id;
+  });
+};
+
 module.exports.search = function(query) {
   var station = find(stationTerms, function(station) {
     return isMatch(station.terms, query);
@@ -30,10 +37,4 @@ module.exports.search = function(query) {
   if (station) {
     return station.station;
   }
-};
-
-module.exports.getStopStation = function(stop) {
-  return find(stations, function(station) {
-    return util.isStopAtStation(stop, station);
-  });
 };
