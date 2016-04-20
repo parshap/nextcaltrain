@@ -50,7 +50,7 @@ loadCaltrainSchedule(function(err, getSchedule) {
     t.equal(firstTripStop.date.getMonth(), 11);
     t.equal(firstTripStop.date.getDate(), 1);
     t.equal(firstTripStop.date.getHours(), 12);
-    t.equal(firstTripStop.date.getMinutes(), 7);
+    t.equal(firstTripStop.date.getMinutes(), 0);
 
     t.assert(isStopAtStation(firstTripStop.stop, stop.fromStation));
     t.assert(isStopAtStation(lastTripStop.stop, stop.toStation));
@@ -88,9 +88,9 @@ loadCaltrainSchedule(function(err, getSchedule) {
     }
     // Should have seen local, limited, bullet
     t.equal(seenRoutes.size, 3);
-    t.ok(seenRoutes.has("LOCAL"));
-    t.ok(seenRoutes.has("LIMITED"));
-    t.ok(seenRoutes.has("BABY BULLET"));
+    t.ok(seenRoutes.has("Lo-16APR"));
+    t.ok(seenRoutes.has("Li-16APR"));
+    t.ok(seenRoutes.has("Bu-16APR"));
 
     t.end();
   });
