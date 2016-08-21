@@ -5,11 +5,27 @@
 # update-data http://www.caltrain.com/Assets/GTFS/caltrain/GTFS-Caltrain-Devs.zip
 #
 
+set -e
 zipurl=$1
+
+# Download data
 zipbase=`basename $zipurl`
-zippath=`mktemp -t "$zipbase"`
+zippath=`mktemp -t "${zipbase}.XXXX"`
 curl "$zipurl" -o $zippath
+
+# Delete previous data
+rm -rf data/*
+
+# Unpack data into data/ directory
 unzip -d ./data/ $zippath
 rm $zippath
+# Move data from nested directory
+mv data/*/*.txt data/
+rmdir $(find data/* -type d | xargs)
 
+# Fix line endings
+sed -r -i 's/[\r\n]+/\n/g' data/*.txt
+sed -i '/^$/d' data/*.txt
+
+# Update data.json
 npm run dump-data
