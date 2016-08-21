@@ -6,6 +6,7 @@ var CURRENT_YEAR = new Date().getFullYear();
 var loadCaltrainSchedule = require("./async");
 var isStopAtStation = require("./lib/util").isStopAtStation;
 var stations = require("./stations");
+var getRouteName = require("./route-name");
 
 loadCaltrainSchedule(function(err, getSchedule) {
   if (err) {
@@ -20,6 +21,19 @@ loadCaltrainSchedule(function(err, getSchedule) {
       t.equal(stations.byId(station.id), station);
       t.equal(stations.search(station.name), station);
     });
+    t.end();
+  });
+
+  test("route-name", function(t) {
+    var VALID_ROUTE_NAMES = ["Local", "Limited", "Bullet"];
+    var routes = getSchedule.store.routes;
+    Object.keys(routes).forEach(function(key) {
+      var routeName = getRouteName(routes[key].route_id);
+      t.assert(
+        getRouteName.KNOWN_ROUTE_NAMES.indexOf(routeName) !== -1,
+        "should be valid route name: " + routeName
+      )
+    })
     t.end();
   });
 
