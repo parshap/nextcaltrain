@@ -1,6 +1,6 @@
 "use strict";
 
-var find = require("array-find");
+require("array.prototype.find");
 var stations = require("./stations.json");
 
 var stationTerms = stations.map(function(station) {
@@ -25,13 +25,13 @@ function isMatch(terms, query) {
 module.exports = stations;
 
 module.exports.byId = function(id) {
-  return find(stations, function(station) {
+  return stations.find(function(station) {
     return station.id === id;
   });
 };
 
 module.exports.search = function(query) {
-  var station = find(stationTerms, function(station) {
+  var station = stationTerms.find(function(station) {
     return isMatch(station.terms, query);
   });
   if (station) {
