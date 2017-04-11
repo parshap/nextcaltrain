@@ -102,9 +102,9 @@ loadCaltrainSchedule(function(err, getSchedule) {
     }
     // Should have seen local, limited, bullet
     t.equal(seenRoutes.size, 3);
-    t.ok(seenRoutes.has("Lo-16APR"));
-    t.ok(seenRoutes.has("Li-16APR"));
-    t.ok(seenRoutes.has("Bu-16APR"));
+    t.ok(seenRoutes.has("Lo-127"));
+    t.ok(seenRoutes.has("Li-127"));
+    t.ok(seenRoutes.has("Bu-127"));
 
     t.end();
   });
