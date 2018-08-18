@@ -1,9 +1,13 @@
 route_id,direction_id,direction
-Lo-130,0,North
-Lo-130,1,South
 Bu-130,0,North
 Bu-130,1,South
-TaSj-130,0,North
-TaSj-130,1,South
 Li-130,0,North
 Li-130,1,South
+Lo-130,0,North
+Lo-130,1,South
+TaSj-130,0,North
+TaSj-130,1,South
+Sp-130,0,North
+Sp-130,1,South
+Gi-130,0,North
+Gi-130,1,South
