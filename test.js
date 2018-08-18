@@ -41,6 +41,7 @@ loadCaltrainSchedule(function(err, getSchedule) {
     var getNextStop = getSchedule({
       from: "ctsf",
       to: "ctsmat",
+      // Should be a weekend
       date: new Date(CURRENT_YEAR, 11, 1, 12),
     });
     var stop = getNextStop();
@@ -59,12 +60,19 @@ loadCaltrainSchedule(function(err, getSchedule) {
     t.equal(stop.trip.trip_id, firstTripStop.stopTime.trip_id);
 
     t.equal(firstTripStop.stopTime.stop_id, "70012");
-
     t.equal(firstTripStop.date.getFullYear(), CURRENT_YEAR);
     t.equal(firstTripStop.date.getMonth(), 11);
     t.equal(firstTripStop.date.getDate(), 1);
     t.equal(firstTripStop.date.getHours(), 12);
-    t.equal(firstTripStop.date.getMinutes(), 0);
+    t.equal(firstTripStop.date.getMinutes(), 4);
+
+    t.equal(lastTripStop.stopTime.stop_id, "70092");
+    t.equal(lastTripStop.date.getFullYear(), CURRENT_YEAR);
+    t.equal(lastTripStop.date.getMonth(), 11);
+    t.equal(lastTripStop.date.getDate(), 1);
+    t.equal(lastTripStop.date.getHours(), 12);
+    t.equal(lastTripStop.date.getMinutes(), 26);
+
 
     t.assert(isStopAtStation(firstTripStop.stop, stop.fromStation));
     t.assert(isStopAtStation(lastTripStop.stop, stop.toStation));
@@ -92,7 +100,8 @@ loadCaltrainSchedule(function(err, getSchedule) {
     var getNextStop = getSchedule({
       from: "ctsf",
       to: "ctsj",
-      date: new Date(CURRENT_YEAR, 11, 1, 12),
+      // Should be a weekday
+      date: new Date(CURRENT_YEAR, 11, 3, 12),
     });
 
     var seenRoutes = new Set();

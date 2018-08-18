@@ -6,7 +6,8 @@ var KNOWN_ROUTE_NAMES = [
   "Local",
   "Limited",
   "Bullet",
-  "Shuttle"
+  "Shuttle",
+  "Special",
 ]
 
 module.exports = function getRouteName(routeId) {
@@ -14,14 +15,20 @@ module.exports = function getRouteName(routeId) {
   if (name.startsWith("lo")) {
     return "Local";
   }
-  else if (name.startsWith("li")) {
+  else if (name.startsWith("li-")) {
     return "Limited";
   }
-  else if (name.startsWith("bu")) {
+  else if (name.startsWith("bu-")) {
     return "Bullet";
   }
-  else if (name.startsWith("tasj")) {
+  else if (name.startsWith("tasj-")) {
     return "Shuttle";
+  }
+  else if (name.startsWith("gi-")) {
+    return "Special";
+  }
+  else if (name.startsWith("sp-")) {
+    return "Special";
   }
   else {
     return routeId;
