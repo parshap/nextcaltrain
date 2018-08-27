@@ -13,8 +13,8 @@ var args = require('minimist')(process.argv.slice(2), {
   },
 });
 
-var from = args._[0];
-var to = args._[1];
+var from = args._[0].toString();
+var to = args._[1].toString();
 
 if ( ! from ) {
   console.error("A start location must be given.");
