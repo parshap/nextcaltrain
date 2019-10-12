@@ -33,7 +33,6 @@
     "csv-parser": "^1.11.0",
     "minimist": "^1.2.0",
     "object-filter": "^1.0.2",
-    "string.prototype.startswith": "^0.2.0",
     "trim-object-stream": "^1.1.0",
     "xtend": "^4.0.1"
   },

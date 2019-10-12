@@ -28,7 +28,7 @@ loadCaltrainSchedule(function(err, getSchedule) {
     var VALID_ROUTE_NAMES = ["Local", "Limited", "Bullet"];
     var routes = getSchedule.store.routes;
     Object.keys(routes).forEach(function(key) {
-      var routeName = getRouteName(routes[key].route_id);
+      var routeName = getRouteName(routes[key]);
       t.assert(
         getRouteName.KNOWN_ROUTE_NAMES.indexOf(routeName) !== -1,
         "should be valid route name: " + routeName
@@ -107,13 +107,13 @@ loadCaltrainSchedule(function(err, getSchedule) {
     var seenRoutes = new Set();
     for (var i = 0; i < 20; i++) {
       var stop = getNextStop();
-      seenRoutes.add(stop.route.route_id);
+      seenRoutes.add(stop.route.route_short_name);
     }
     // Should have seen local, limited, bullet
     t.equal(seenRoutes.size, 3);
-    t.ok(seenRoutes.has("Lo-130"));
-    t.ok(seenRoutes.has("Li-130"));
-    t.ok(seenRoutes.has("Bu-130"));
+    t.ok(seenRoutes.has("Local"));
+    t.ok(seenRoutes.has("Limited"));
+    t.ok(seenRoutes.has("Bullet"));
     t.end();
   });
 
