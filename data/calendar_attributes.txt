@@ -1,4 +1,4 @@
 service_id,service_description
-mtwtf,Weekday
-sat_sun,Weekend
-sat_extra,Sat Extra Service
+c_17997_b_22470_d_31,Year Round Weekday Starting 10/7/19 (Weekday)
+c_16884_b_19708_d_96,Year Round Weekend (Weekend)
+c_16883_b_19709_d_32,Year Round Saturday (Saturday only)
