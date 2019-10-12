@@ -1,6 +1,6 @@
 {
   "name": "nextcaltrain",
-  "version": "2.1.9",
+  "version": "2.1.10",
   "description": "Find the next Caltrain",
   "main": "index.js",
   "scripts": {
